@@ -8,9 +8,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Permanent+Marker&display=swap');
         
         body {
-            background-image: url('background.jpg'); /* Ruta de la imagen de fondo */
-            background-size: cover; /* Hace que la imagen cubra toda la pantalla */
-            background-position: center; /* Centra la imagen */
+            background-image: url('background.jpg');
+            background-size: cover; 
+            background-position: center; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -23,8 +23,8 @@
             flex-direction: column;
             align-items: center;
             width: 100%;
-            padding: 0 15px; /* Añade espacio en los laterales para dispositivos móviles */
-            box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+            padding: 0 15px; 
+            box-sizing: border-box; 
         }
         .top-banner {
             background: #d2c592;
@@ -37,7 +37,7 @@
             border: 5px solid #ff341d;
             text-align: center;
             position: relative;
-            z-index: 1; /* Asegura que el banner esté por encima de otros elementos */
+            z-index: 1; 
         }
         .marquee {
             background-color: rgb(210, 210, 210);
@@ -47,12 +47,12 @@
             font-size: 3rem;
             font-family: 'Permanent Marker', cursive;
             color: black;
-            width: 100%; /* Hace que el cartel ocupe todo el ancho disponible */
-            max-width: 600px; /* Limita el ancho máximo del cartel */
+            width: 100%; 
+            max-width: 600px; 
             text-transform: uppercase;
             position: relative;
-            z-index: 1; /* Asegura que el cartel esté por encima de otros elementos */
-            box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+            z-index: 1; 
+            box-sizing: border-box; 
         }
         .lights {
             position: absolute;
@@ -72,7 +72,6 @@
             position: absolute;
         }
 
-        /* Se posicionan las luces alrededor del cartel */
         .light:nth-child(1) { top: 0; left: 0; animation-delay: 0s; }
         .light:nth-child(2) { top: 0; right: 0; animation-delay: 0.1s; }
         .light:nth-child(3) { bottom: 0; left: 0; animation-delay: 0.2s; }
@@ -105,7 +104,7 @@
     </style>
 </head>
 <body>
-    <!-- Reproductor de audio en loop y autoplay -->
+    
     <audio id="audio" autoplay loop>
         <source src="amnesia.mp3" type="audio/mp3">
         Tu navegador no soporta el elemento de audio.
