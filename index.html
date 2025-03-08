@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Permanent+Marker&display=swap');
+        
+        body {
+            background-image: url('background.jpg'); /* Ruta de la imagen de fondo */
+            background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+            background-position: center; /* Centra la imagen */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .marquee-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 0 15px; /* Añade espacio en los laterales para dispositivos móviles */
+            box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+        }
+        .top-banner {
+            background: #d2c592;
+            color: #191717;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 2rem;
+            padding: 10px 40px;
+            border-radius: 10px 10px 0 0;
+            text-transform: uppercase;
+            border: 5px solid #ff341d;
+            text-align: center;
+            position: relative;
+            z-index: 1; /* Asegura que el banner esté por encima de otros elementos */
+        }
+        .marquee {
+            background-color: rgb(210, 210, 210);
+            border: 10px solid #ff341d;
+            padding: 20px;
+            text-align: center;
+            font-size: 3rem;
+            font-family: 'Permanent Marker', cursive;
+            color: black;
+            width: 100%; /* Hace que el cartel ocupe todo el ancho disponible */
+            max-width: 600px; /* Limita el ancho máximo del cartel */
+            text-transform: uppercase;
+            position: relative;
+            z-index: 1; /* Asegura que el cartel esté por encima de otros elementos */
+            box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+        }
+        .lights {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: calc(100% + 30px);
+            height: calc(100% + 30px);
+            pointer-events: none;
+        }
+        .light {
+            width: 15px;
+            height: 15px;
+            background-color: orange;
+            border-radius: 50%;
+            box-shadow: 0 0 15px orange;
+            animation: blink 1s infinite alternate;
+            position: absolute;
+        }
+
+        /* Se posicionan las luces alrededor del cartel */
+        .light:nth-child(1) { top: 0; left: 0; animation-delay: 0s; }
+        .light:nth-child(2) { top: 0; right: 0; animation-delay: 0.1s; }
+        .light:nth-child(3) { bottom: 0; left: 0; animation-delay: 0.2s; }
+        .light:nth-child(4) { bottom: 0; right: 0; animation-delay: 0.3s; }
+        .light:nth-child(5) { top: 0; left: 12.5%; animation-delay: 0.4s; }
+        .light:nth-child(6) { top: 0; left: 25%; animation-delay: 0.5s; }
+        .light:nth-child(7) { top: 0; left: 37.5%; animation-delay: 0.6s; }
+        .light:nth-child(8) { top: 0; left: 50%; animation-delay: 0.7s; }
+        .light:nth-child(9) { top: 0; left: 62.5%; animation-delay: 0.8s; }
+        .light:nth-child(10) { top: 0; left: 75%; animation-delay: 0.9s; }
+        .light:nth-child(11) { top: 0; left: 87.5%; animation-delay: 1s; }
+        .light:nth-child(12) { bottom: 0; left: 12.5%; animation-delay: 1.1s; }
+        .light:nth-child(13) { bottom: 0; left: 25%; animation-delay: 1.2s; }
+        .light:nth-child(14) { bottom: 0; left: 37.5%; animation-delay: 1.3s; }
+        .light:nth-child(15) { bottom: 0; left: 50%; animation-delay: 1.4s; }
+        .light:nth-child(16) { bottom: 0; left: 62.5%; animation-delay: 1.5s; }
+        .light:nth-child(17) { bottom: 0; left: 75%; animation-delay: 1.6s; }
+        .light:nth-child(18) { bottom: 0; left: 87.5%; animation-delay: 1.7s; }
+        .light:nth-child(19) { left: 0; top: 25%; animation-delay: 1.8s; }
+        .light:nth-child(20) { left: 0; top: 50%; animation-delay: 1.9s; }
+        .light:nth-child(21) { left: 0; top: 75%; animation-delay: 2s; }
+        .light:nth-child(22) { right: 0; top: 25%; animation-delay: 2.1s; }
+        .light:nth-child(23) { right: 0; top: 50%; animation-delay: 2.2s; }
+        .light:nth-child(24) { right: 0; top: 75%; animation-delay: 2.3s; }
+
+        @keyframes blink {
+            0% { background-color: #ffce72; box-shadow: 0 0 20px #ffce72; }
+            100% { background-color: darkorange; box-shadow: 0 0 20px darkorange; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Reproductor de audio en loop y autoplay -->
+    <audio id="audio" autoplay loop>
+        <source src="amnesia.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <div class="marquee-container">
+        <div class="top-banner">NANNYTA 🧡</div>
+        <div class="marquee">
+            <div class="lights">
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+            </div>
+            ¡Bienvenida a casa, mi mujer hermosa, te amo tanto ✨🍊!
+        </div>
+    </div>
+</body>
+</html>
